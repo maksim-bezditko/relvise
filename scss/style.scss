@@ -10,12 +10,12 @@ body {
 	margin: 0px auto;
 	padding: 0 15px;
 	box-sizing: content-box;
+	position: relative;
 }
 
 .wrapper {
 	overflow: hidden;
 	width: 100%;
-	// height: 100%;
 	position: relative;
 }
 .header {
@@ -50,15 +50,8 @@ body {
 	@media (max-width: 500px) {
 		margin-right: 90/1046*100%;
 	}
-	// border: 1px solid #000;
 	
 }
-.header__menu {
-	// border: 1px solid #000;
-}
-.menu {
-}
-
 .menu__items {
 	display: flex;
 	flex-wrap: wrap;
@@ -71,14 +64,6 @@ body {
 
 	}
 }
-._au_first {
-	// border: 1px solid #500;
-}
-
-._au_second {
-	// border: 1px solid #050;
-}
-
 @media (max-width: 442px) {
 	.element {
 		// border: 1px solid #000;
@@ -86,18 +71,6 @@ body {
 		padding-bottom: 10px;
 	}
 }
-._au_first_first {
-
-}
-._au_first_second {
-}
-._au_second {
-}
-._au_second_first {
-}
-._au_second_second {
-}
-
 ._au_first, ._au_second {
 	display: flex;
 	@media (max-width: 442px) {
@@ -127,30 +100,13 @@ body {
 
 .main {
 	position: relative;
-
-}
-
-.main__container {
-}
-
-.main img {
-	position: absolute;
-	z-index: 0;
-	// right: 0;
-	// bottom: 0;
-	@media (min-width: 2000px) {
-		object-position: 0 50%;
-	}
-	@media (min-width: 2100px) {
-	}
-	@media (max-width: 1350px) {
-		right: 0;
-	}
-	@media (min-width: 1436px) {
-		width: 100%;
-	}
-	@media (max-width: 860px) {
-		opacity: 0.6;
+	background: url('../images/background.jpg');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	@media (max-width: 850px) {
+		background-image: url('../images/background_trans.png');
 	}
 }
 
@@ -233,25 +189,65 @@ body {
 }
 
 .cards {
+	background-color: #FAFAFA;
+	margin: -111px 0 0 0;
 }
 .cards__container {
-	display: flex;
-	justify-content: space-between;
 }
+
+.cards__body {
+	display: flex;
+	margin: 0 -15px;
+}
+
+.cards__column	{
+	flex: 1 0 33.333%;
+	padding: 0 15px;
+}
+
+@media (max-width: 887px) {
+	.cards__body {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.cards__column	{
+		flex-basis: 50%;
+	}
+	.cards__column:last-child {
+		flex-basis: 50%;
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 600px) {
+	.cards__body {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.cards__column	{
+		flex-basis: 100%;
+	}
+	.cards__column:not(:first-child) {
+		margin-top: 15px;
+	}
+}
+
+
 .cards__item {
-	position: relative;
-	z-index: 1000;
-	bottom: 80px;
-	width: 30%;
-	height: 100%;
-	padding: 35px 40px;
 	background-color: #FFFFFF;
-	box-shadow: 0 0px 10px rgba(0, 0, 0, 0.356);
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+	position: relative;
+	z-index: 1000px;
+	padding: 35px 40px;
+	height: 100%;
 }
 
 .cards__item > *:not(:last-child) {
 	padding: 0px 0px 15px 0px;
 }
+
 
 .cards__image {
 	text-align: left;
@@ -280,3 +276,94 @@ body {
 	color: white;
 }
 
+.stats {
+	height: 1000px;
+	background-color: #FAFAFA;
+}
+.stats__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+}
+.stats__body {
+	margin: 80px 0px 0px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	// border: 1px solid #000;
+	width: 100%;
+}
+.stats__header {
+	width: 610px / 1046px  * 100%;
+	margin-bottom: 50px;
+}
+.stats__title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.title {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 57px / 40px * 100%;
+	letter-spacing: 0.2px;
+	color: #252B42;
+}
+.stats__text {
+	text-align: center;
+}
+.text {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px / 14px * 100%;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #737373;
+}
+.stats__footer {
+	// border: 1px solid #000;
+	display: flex;
+	// margin: 0 -30px;
+	width: 100%;
+	justify-content: space-between;
+}
+
+
+.stats__column {
+}
+
+.stats__item {
+	flex: 0 1 25%;
+	height: 100%;
+	background-color: #ffffff;
+	padding: 30px 41.5px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.stats__item:not(:last-child) {
+	margin-bottom: 10px;
+	margin-right: 30px / 1049px * 100%;
+}
+
+.stats__item-image {
+}
+.stats__item-number {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 57px / 40px * 100%;
+	letter-spacing: 0.2px;
+	color: #252B42;
+}
+.stats__item-description {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px / 16px * 100%;
+	text-align: center;
+	letter-spacing: 0.1px;
+	color: #737373;
+}
