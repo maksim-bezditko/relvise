@@ -3,13 +3,14 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	background-color: #FAFAFA;
 }
 
 .container {
 	max-width: 1046px;
 	margin: 0px auto;
 	padding: 0 15px;
-	box-sizing: content-box;
+	// box-sizing: content-box;
 	position: relative;
 }
 
@@ -277,42 +278,55 @@ body {
 }
 
 .stats {
-	height: 1000px;
-	background-color: #FAFAFA;
 }
 .stats__container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 .container {
 }
 .stats__body {
-	margin: 80px 0px 0px 0px;
+	margin-top: 80px;
+}
+.stats__header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	// border: 1px solid #000;
-	width: 100%;
-}
-.stats__header {
-	width: 610px / 1046px  * 100%;
 	margin-bottom: 50px;
 }
+
+.stats__header-width {
+	width: 620px;
+}
+
+@media (max-width: 780px) {
+	.stats__header-width {
+		width: 80%;
+	}
+}
+
+@media (max-width: 500px) {
+	.stats__header-width {
+		width: 90%;
+	}
+}
+
 .stats__title {
-	text-align: center;
 	margin-bottom: 10px;
 }
+
+
 .title {
 	font-weight: 700;
 	font-size: 40px;
 	line-height: 57px / 40px * 100%;
 	letter-spacing: 0.2px;
 	color: #252B42;
-}
-.stats__text {
 	text-align: center;
+}
+
+
+
+.stats__text {
 }
 .text {
 	font-weight: 500;
@@ -322,35 +336,55 @@ body {
 	letter-spacing: 0.2px;
 	color: #737373;
 }
+
+@media (max-width: 780px) {
+	.stats__title {
+		font-size: 30px;
+	}
+	.stats__text {
+		font-size: 14px;
+	}
+
+}
+
 .stats__footer {
-	// border: 1px solid #000;
 	display: flex;
-	// margin: 0 -30px;
-	width: 100%;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: -10px -15px;
 }
 
 
 .stats__column {
+	flex: 1 0 25%;
+	padding: 10px 15px;
+	// border: 1px solid rgb(239, 4, 4);
 }
+
+@media (max-width: 1000px) {
+	.stats__column {
+		flex: 1 0 50%;
+	}
+}
+@media (max-width: 570px) {
+	.stats__column {
+		flex: 1 0 100%;
+	}
+}
+
 
 .stats__item {
-	flex: 0 1 25%;
-	height: 100%;
 	background-color: #ffffff;
+	// border: 1px solid #000;
 	padding: 30px 41.5px 30px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	height: 100%;
 }
 
-.stats__item:not(:last-child) {
+.stats__item > *:not(:last-child) {
 	margin-bottom: 10px;
-	margin-right: 30px / 1049px * 100%;
 }
 
 .stats__item-image {
+	text-align: center;
 }
 .stats__item-number {
 	font-weight: 700;
@@ -358,12 +392,13 @@ body {
 	line-height: 57px / 40px * 100%;
 	letter-spacing: 0.2px;
 	color: #252B42;
+	text-align: center;
 }
 .stats__item-description {
+	text-align: center;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 24px / 16px * 100%;
-	text-align: center;
 	letter-spacing: 0.1px;
 	color: #737373;
 }
