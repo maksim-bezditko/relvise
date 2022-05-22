@@ -893,6 +893,12 @@ body {
   padding: 15px 22.5px;
   position: absolute;
   right: 0;
+  -webkit-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+}
+
+.subscribe__button:active {
+  background: #d1663b;
 }
 
 @media (max-width: 815px) {
@@ -939,6 +945,230 @@ body {
   margin-left: -4500px;
   z-index: 1;
   margin-bottom: -20px;
+}
+
+/*--------GETINTOUCH---------------------------GETINTOUCH---------------------------GETINTOUCH-------------------------*/
+.getintouch__inner {
+  padding: 0 0 80px 0px;
+}
+
+.getintouch__header {
+  padding: 80px 0;
+}
+
+.getintouch__title {
+  padding-bottom: 10px;
+}
+
+.cards-getintouch__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 32.5px;
+}
+
+.card-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFFFFF;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  padding: 50px 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.card-item > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.card-item__emails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-item__emails div a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171.42857%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #252B42;
+}
+
+.card-item__support {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #252B42;
+}
+
+.card-item__button {
+  padding: 10px 20px;
+  border: 1px solid #FF7B47;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171.42857%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #FF7B47;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.card-item__button:hover {
+  background-color: #FF7B47;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.cards-getintouch__item_active {
+  background-color: #252B42;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.card-item__emails_active div a {
+  color: white;
+}
+
+.card-item__support_active {
+  color: white;
+}
+
+.card-item__button_active {
+  background-color: #252B42;
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+
+.card-item__button_active:hover {
+  background-color: #fff;
+  border: 1px solid #ffffff;
+  color: #252B42;
+}
+
+@media (max-width: 973px) {
+  .cards-getintouch__inner > *:nth-child(even) {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .cards-getintouch__item {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .cards-getintouch__item_active {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .cards-getintouch__inner > * {
+    padding: 50px 0;
+  }
+  .cards-getintouch__inner {
+    padding: 0 0;
+  }
+}
+
+@media (max-width: 583px) {
+  .cards-getintouch__inner > * {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .cards-getintouch__inner > *:last-child {
+    padding: 30px 0;
+  }
+}
+
+/*------ContactUs-----------ContactUs---------------ContactUs---------ContactUs---------*/
+.contact-us {
+  background-color: #FFFFFF;
+  padding: 40px 0;
+  padding-right: 15px;
+}
+
+.contact-us__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-us__main > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contact-us__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133.33333%;
+  letter-spacing: 0.1px;
+  color: #252B42;
+}
+
+.contact-us__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 142.85714%;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.contact-us__button {
+  background: #FF7B47;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 14px;
+  line-height: 200%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  .contact-us__main {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .contact-us__text {
+    padding-bottom: 15px;
+  }
+  .contact-us__button {
+    padding: 12px 30px;
+  }
 }
 
 .space {
