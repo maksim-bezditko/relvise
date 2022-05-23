@@ -964,6 +964,10 @@ body {
 }
 
 /*--------GETINTOUCH---------------------------GETINTOUCH---------------------------GETINTOUCH-------------------------*/
+.getintouch {
+  background-color: #f3f3f3;
+}
+
 .getintouch__inner {
   padding: 0 0 80px 0px;
 }
