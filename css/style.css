@@ -61,7 +61,6 @@ body {
   font-size: 24px;
   line-height: calc(32px / 24px * 100%);
   letter-spacing: 0.1px;
-  color: #252B42;
   margin-right: 12.6195%;
 }
 
@@ -69,6 +68,10 @@ body {
   .header__logo {
     margin-right: 8.60421%;
   }
+}
+
+.header__logo a {
+  color: #252B42;
 }
 
 .menu__items {
@@ -91,10 +94,33 @@ body {
   }
 }
 
+.element {
+  position: relative;
+}
+
+.element::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.element:hover::after {
+  background-color: lightgray;
+  width: 75%;
+}
+
 @media (max-width: 442px) {
   .element {
     width: 75px;
     padding-bottom: 10px;
+  }
+  .element::after {
+    bottom: 10px;
   }
 }
 
@@ -137,6 +163,11 @@ body {
   .menu__items > ._au_second * {
     font-size: 16px;
   }
+}
+
+.menu__items > ._au_first *:hover,
+.menu__items > ._au_second *:hover {
+  color: #4d4d4d;
 }
 
 .main {
@@ -877,24 +908,43 @@ body {
 .subscribe__form {
   border: 1px solid #E6E6E6;
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   background-color: #FAFAFA;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   position: relative;
 }
 
+.subscribe__form form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .subscribe__input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 15px 20px;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.2px;
   color: #737373;
+}
+
+@media (max-width: 385px) {
+  .subscribe__input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 432px) {
+  .subscribe__input {
+    padding: 12px 12px;
+  }
 }
 
 .subscribe__button {
@@ -907,8 +957,6 @@ body {
   letter-spacing: 0.2px;
   color: #FFFFFF;
   padding: 15px 22.5px;
-  position: absolute;
-  right: 0;
   -webkit-transition: all 0.1s ease 0s;
   transition: all 0.1s ease 0s;
 }
@@ -1321,6 +1369,16 @@ body {
 
 .copyright__socials a:not(:first-child) {
   margin-left: 20px;
+}
+
+.copyright__socials a img {
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.copyright__socials a img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media (max-width: 700px) {

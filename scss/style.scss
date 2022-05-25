@@ -52,13 +52,15 @@ body {
     font-size: 24px;
     line-height: calc(32px / 24px * 100%);
     letter-spacing: 0.1px;
-    color: #252B42;
     margin-right: 132/1046*100%;
     @media (max-width: 500px) {
         margin-right: 90/1046*100%;
     }
 }
 
+.header__logo a {
+    color: #252B42;
+}
 .menu__items {
     display: flex;
     flex-wrap: wrap;
@@ -71,12 +73,33 @@ body {
         margin: 0px 10px 0px 0px;
     }
 }
+.element {
+    position: relative;
+}
+.element::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.element:hover::after {
+    background-color:rgb(211, 211, 211);
+    width: 75%;
+}
+
 
 @media (max-width: 442px) {
     .element {
         // border: 1px solid #000;
         width: 75px;
         padding-bottom: 10px;
+    }
+    .element::after {
+        bottom: 10px;
     }
 }
 
@@ -104,7 +127,10 @@ body {
         font-size: 16px;
     }
 }
-
+.menu__items>._au_first *:hover,
+.menu__items>._au_second *:hover {
+    color: #4d4d4d;
+}
 .main {
     position: relative;
     background: url('../images/background.jpg');
@@ -748,19 +774,34 @@ body {
 .subscribe__form {
     border: 1px solid #E6E6E6;
     border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
     background-color:#FAFAFA;
     flex-basis: 50%;
     position: relative;
 }
+.subscribe__form form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 .subscribe__input {
+    flex-grow: 1;
     padding: 15px 20px;
     font-weight: 400;
     font-size: 14px;
     // line-height: 200%;
     letter-spacing: 0.2px;
     color: #737373;
+}
+
+@media (max-width: 385px) {
+    .subscribe__input {
+        width: 60%;
+    }
+}
+@media (max-width: 432px) {
+    .subscribe__input {
+        padding: 12px 12px;
+    }
 }
 .subscribe__button {
     background: #FF7B47;
@@ -772,8 +813,8 @@ body {
     letter-spacing: 0.2px;
     color: #FFFFFF;
     padding: 15px 22.5px;
-    position: absolute;
-    right: 0;
+    // position: absolute;
+    // right: 0;
     transition: all 0.1s ease 0s;
 }
 .subscribe__button:active {
@@ -1124,6 +1165,13 @@ body {
     margin-left: 20px;
 }
 
+.copyright__socials a img {
+    transition: all 0.2s ease 0s;
+}
+.copyright__socials a img:hover {
+    transform: scale(1.2);
+}
+
 @media (max-width: 700px) {
     .copyright__socials a:not(:first-child) {
         margin-left: 10px;
@@ -1153,3 +1201,6 @@ body {
     }
 }
 
+.test {
+    border:#0D5C63
+}
